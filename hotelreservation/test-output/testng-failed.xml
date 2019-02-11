@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Booking.com_Suite]">
+  <test thread-count="5" name="Perform_Reservation_Tests(failed)">
+    <parameter name="path_to_driver" value="booking-tests/src/test/resources/chromedriver"/>
+    <parameter name="navigateTo_url" value="https://www.booking.com"/>
+    <parameter name="room_count" value="1"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="search_cityName" value="Los Angeles"/>
+    <classes>
+      <class name="ReserveBookingTest">
+        <methods>
+          <include name="createDriver"/>
+          <include name="createAndStopService"/>
+          <include name="quitDriver"/>
+          <include name="init"/>
+          <include name="bookReservation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- ReserveBookingTest -->
+    </classes>
+  </test> <!-- Perform_Reservation_Tests(failed) -->
+</suite> <!-- Failed suite [Booking.com_Suite] -->
