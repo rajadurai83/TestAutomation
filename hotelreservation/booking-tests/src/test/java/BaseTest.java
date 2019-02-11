@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -57,12 +56,6 @@ public class BaseTest {
 	public void quitDriver()
 	{
 	   driver.quit();
-	}
-	
-	
-	@AfterClass
-	public void createAndStopService() {
-	   // ((DriverService) driver).stop();
 	}
 
 }
